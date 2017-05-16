@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class goToBall : MonoBehaviour {
 	public GameObject ball;
+    float speed;
 	void Start(){
-		ball = GameObject.Find("Ball"); 
-	}
-	void Update()
-	{
-		Transform target = ball.transform;
-		float moveSpeed = 5; 
-		float speed = (float)0.3;
-		float rotationSpeed = 5;
-		this.transform.LookAt(target);
-		this.transform.position = Vector3.Lerp( new Vector3(transform.position.x,0,transform.position.z), new Vector3(target.position.x, 0, target.position.z), Time.deltaTime );	
-	}
+		ball = GameObject.Find("Ball");
+        speed = 30.0f;
+    }
+    void Update()
+    {
+        
+        Transform target = ball.transform;
+       // if (target.position.y <= 1.10f)
+       // {
+            print(target.position.y);
+            this.transform.LookAt(target);
+            this.transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
+            this.transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.position.x + 1, 0, target.position.z + 1), Time.deltaTime * speed);
+       // }
+    }
 }
