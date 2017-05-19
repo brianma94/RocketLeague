@@ -32,10 +32,6 @@ public class MenuScript : MonoBehaviour {
 		exitButton.enabled = true;
 	}
 
-	public void StartLevel() {
-		startMenu.enabled = false;
-	}
-
 	public void ExitGame() {
 		Application.Quit ();
 	}

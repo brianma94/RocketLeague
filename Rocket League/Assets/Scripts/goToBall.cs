@@ -20,5 +20,9 @@ public class goToBall : MonoBehaviour {
             this.transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
             this.transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.position.x + 1, 0, target.position.z + 1), Time.deltaTime * speed);
        // }
+		if (Input.GetKey(KeyCode.Escape)) // TEST
+		{
+			Application.Quit();
+		}
     }
 }
