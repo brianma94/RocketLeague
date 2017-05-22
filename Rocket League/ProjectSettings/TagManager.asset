@@ -4,9 +4,10 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Goal
   - enemy
   - car1
+  - Goal_L
+  - Goal_R
   layers:
   - Default
   - TransparentFX
