@@ -10,7 +10,7 @@ public class CarScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		GetComponent<Rigidbody>().centerOfMass = new Vector3(0.0f, -0.3f, 0.0f);
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -52,5 +52,6 @@ public class CarScript : MonoBehaviour {
 		// Traction
 		GetComponent<Rigidbody>().AddForce(-0.1f * Vector3.Dot(GetComponent<Rigidbody>().velocity, transform.right) * transform.right);
 
-	}
+
+    }
 }
