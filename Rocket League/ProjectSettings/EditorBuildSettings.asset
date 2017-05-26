@@ -6,8 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Menu.unity
+    path: Assets/Scenes/Menu.unity
     guid: 8713bbfe367de3043841a0c6fa4aa01b
   - enabled: 1
-    path: Assets/Scene.unity
+    path: Assets/Scenes/Scene.unity
     guid: f14ab6be4bc324c72b481c122a4b135d
+  - enabled: 1
+    path: Assets/Scenes/CarSelection.unity
+    guid: 2b27ef8a7f7783746b27858d3c996d6f
