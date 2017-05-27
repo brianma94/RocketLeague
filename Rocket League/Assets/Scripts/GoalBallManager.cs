@@ -21,7 +21,7 @@ public class GoalBallManager : MonoBehaviour
     {
 		Debug.Log (other.gameObject.tag, other);
 		if (other.gameObject.tag == "Goal_R") {
-			GameObject car = GameObject.Find ("CC_ME_R4");
+			GameObject car = GameObject.Find ("Player");
 			GameObject enemy = GameObject.Find ("enemy");
 			GameObject ball = GameObject.Find ("Ball");
 			ball.transform.position = GameObject.Find ("BallPosition").transform.position;
@@ -33,7 +33,7 @@ public class GoalBallManager : MonoBehaviour
 			++scoreTeam1;
 			textTeam1.text = scoreTeam1.ToString();
 		} else if (other.gameObject.tag == "Goal_L") {
-			GameObject car = GameObject.Find ("CC_ME_R4");
+			GameObject car = GameObject.Find ("Player");
 			GameObject enemy = GameObject.Find ("enemy");
 			GameObject ball = GameObject.Find ("Ball");
 			ball.transform.position = GameObject.Find ("BallPosition").transform.position;
