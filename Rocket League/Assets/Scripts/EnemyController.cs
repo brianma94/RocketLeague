@@ -41,7 +41,7 @@ public class EnemyController : MonoBehaviour {
 		Transform target = ball.transform;
 		System.Random rnd = new System.Random();
 
-		int number = rnd.Next(1, 50);
+		int number = rnd.Next(1, 10);
 		if (number == 1)
 		{
 
@@ -53,15 +53,25 @@ public class EnemyController : MonoBehaviour {
 			//transform.position);
 		// }
 
-		float motor = maxMotorTorque * 30.0f;
-		//float steering = maxSteeringAngle * Input.GetAxis ("Horizontal");
+		float motor = maxMotorTorque;
+		float steering;
+		/*int number1 = rnd.Next(1, 2);
+		if (number1 == 1) {
+			if (target.transform.localPosition.z > this.transform.localPosition.z) {
+				steering = maxSteeringAngle * 1.0f;
+			} else if (target.transform.localPosition.z < this.transform.localPosition.z) {
+				steering = maxSteeringAngle * -1.0f;
+			} else {
+				steering = 0.0f;
+			}
+		}*/
 
 		foreach (AxleLoadmasterCarInfo1 axleInfo in axleInfos1) {
 			// Check the steering
-			//if (axleInfo.steering == true) {
+			if (axleInfo.steering == true) {
 				//axleInfo.leftWheel.steerAngle = steering;
 				//axleInfo.rightWheel.steerAngle = steering;
-			//}
+			}
 
 			// Check the motor
 			if (axleInfo.motor == true) {

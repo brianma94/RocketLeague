@@ -10,6 +10,8 @@ public class GoalBallManager : MonoBehaviour
 	private int scoreTeam2;
 	public Text textTeam1;
 	public Text textTeam2;
+	public Text min;
+	public Text sec;
 	// Use this for initialization
 	void Start () {
 		//textTeam1 = GameObject.Find ("Team1").GetComponent<Text>();
@@ -19,33 +21,35 @@ public class GoalBallManager : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-		Debug.Log (other.gameObject.tag, other);
+		GameObject car = GameObject.Find ("Player");
+		GameObject enemy = GameObject.Find ("Player1");
+		GameObject enemy2 = GameObject.Find ("Player2");
+		GameObject ball = GameObject.Find ("Ball");
 		if (other.gameObject.tag == "Goal_R") {
-			GameObject car = GameObject.Find ("Player");
-			GameObject enemy = GameObject.Find ("enemy");
-			GameObject ball = GameObject.Find ("Ball");
 			ball.transform.position = GameObject.Find ("BallPosition").transform.position;
 			ball.GetComponent<Rigidbody> ().velocity = Vector3.zero;
-			car.transform.position = GameObject.Find ("CarPosition").transform.position;
-			enemy.transform.position = GameObject.Find ("enemyCarPosition").transform.position;
-			car.GetComponent<Rigidbody> ().velocity = Vector3.zero;
-			enemy.transform.position = GameObject.Find ("enemyCarPosition").transform.position;
-			++scoreTeam1;
+			++scoreTeam2;
 			textTeam1.text = scoreTeam1.ToString();
 		} else if (other.gameObject.tag == "Goal_L") {
-			GameObject car = GameObject.Find ("Player");
-			GameObject enemy = GameObject.Find ("enemy");
-			GameObject ball = GameObject.Find ("Ball");
 			ball.transform.position = GameObject.Find ("BallPosition").transform.position;
 			ball.GetComponent<Rigidbody> ().velocity = Vector3.zero;
-			car.transform.position = GameObject.Find ("CarPosition").transform.position;
-			enemy.transform.position = GameObject.Find ("enemyCarPosition").transform.position;
-			car.GetComponent<Rigidbody> ().velocity = Vector3.zero;
-			enemy.transform.position = GameObject.Find ("enemyCarPosition").transform.position;
-			++scoreTeam2;
+			++scoreTeam1;
 			textTeam2.text = scoreTeam2.ToString();
 		}
     }
+
+	void FixedUpdate(){
+		sec.text = (System.Convert.ToSingle (sec.text) - Time.deltaTime).ToString ();
+		if (System.Convert.ToSingle(sec.text) < 0.0f) {
+			if(System.Convert.ToSingle(min.text) > 0.0f){
+				sec.text = "59";
+				min.text = (System.Convert.ToSingle (min.text) - 1).ToString ();
+			}
+		}
+		if (System.Convert.ToSingle(min.text) <= 0.0f && System.Convert.ToSingle(sec.text) <= 0.0f) {
+			Application.LoadLevel(0);
+		}
+	}
 		
 
 }

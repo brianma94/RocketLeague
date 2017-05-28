@@ -18,15 +18,64 @@ public class MasterController : MonoBehaviour {
 	public float maxMotorTorque;						// Maximum torque the motor can apply to the wheels
 	public float maxSteeringAngle;						// MAximum steering angle of the wheels
 	public float brake;
+	public Camera cam0;
+	public Camera cam1;
+	public Camera cam2;
+	public GameObject car0;
+	public GameObject car1;
+	public GameObject car2;
 
 	// Use this for initialization
 	void Start () {
 		GetComponent<Rigidbody>().centerOfMass = new Vector3(0.0f, -1.0f, 0.0f);
+		cam0 = GameObject.Find ("Player/Camera").GetComponent<Camera>();
+		cam1 = GameObject.Find ("Player1/Camera").GetComponent<Camera>();
+		cam2 = GameObject.Find ("Player2/Camera").GetComponent<Camera>();
+		car0 = GameObject.Find ("Player");
+		car1 = GameObject.Find ("Player1");
+		car2 = GameObject.Find ("Player2");
+		int car = PlayerPrefs.GetInt ("Car");
+		if (car == 0) {
+			cam0.enabled = true;
+			cam2.enabled = false;
+			cam1.enabled = false;
+
+			car0.GetComponent<MasterController> ().enabled = true;
+			car0.GetComponent<EnemyController> ().enabled = false;
+			car1.GetComponent<MasterController> ().enabled = false;
+			car1.GetComponent<EnemyController> ().enabled = true;
+			car2.GetComponent<MasterController> ().enabled = false;
+			car2.GetComponent<EnemyController> ().enabled = true;
+		} else if (car == 1) {
+			cam0.enabled = false;
+			cam1.enabled = true;
+			cam2.enabled = false;
+			car1.GetComponent<MasterController> ().enabled = true;
+			car1.GetComponent<EnemyController> ().enabled = false;
+			car0.GetComponent<MasterController> ().enabled = false;
+			car0.GetComponent<EnemyController> ().enabled = true;
+			car2.GetComponent<MasterController> ().enabled = false;
+			car2.GetComponent<EnemyController> ().enabled = true;
+		} else if (car == 2) {
+			cam0.enabled = false;
+			cam1.enabled = false;
+			cam2.enabled = true;
+			car2.GetComponent<MasterController> ().enabled = true;
+			car2.GetComponent<EnemyController> ().enabled = false;
+			car0.GetComponent<MasterController> ().enabled = false;
+			car0.GetComponent<EnemyController> ().enabled = true;
+			car1.GetComponent<MasterController> ().enabled = false;
+			car1.GetComponent<EnemyController> ().enabled = true;
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Input.GetKey(KeyCode.Escape))
+		{
+			//Application.Quit ();
+			Application.LoadLevel(0);
+		}
 	}
 
 	public void ApplyLocalPositionToVisuals(AxleLoadmasterCarInfo wheelPair) {
@@ -80,7 +129,6 @@ public class MasterController : MonoBehaviour {
 			// Check the motor
 			if (axleInfo.motor == true) {
 				if (!Input.GetKey (KeyCode.UpArrow) && !Input.GetKey (KeyCode.DownArrow)) {
-					Debug.Log ("hey jinny");
 					axleInfo.leftWheel.motorTorque = axleInfo.rightWheel.motorTorque = 0.0f;
 					axleInfo.leftWheel.brakeTorque = axleInfo.rightWheel.brakeTorque = brake;
 				} else {
