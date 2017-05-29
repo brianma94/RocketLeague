@@ -7,6 +7,9 @@ public class MenuScript : MonoBehaviour {
 
 	public Canvas startMenu;
 	public Canvas quitMenu;
+	public Canvas creditsMenu;
+	public Canvas returnMenu;
+	public Canvas selectModeMenu;
 	public Button startButton;
 	public Button selectCarButton;
 	public Button exitButton;
@@ -15,17 +18,22 @@ public class MenuScript : MonoBehaviour {
 	public GameObject player;
 	public GameObject player1;
 	public GameObject player2;
-	public static int car = 0;
 
 	// Use this for initialization
 	void Start () {
 		startMenu = startMenu.GetComponent<Canvas> ();
 		quitMenu = quitMenu.GetComponent<Canvas> ();
+		creditsMenu = creditsMenu.GetComponent<Canvas> ();
+		returnMenu = returnMenu.GetComponent<Canvas> ();
+		selectModeMenu = selectModeMenu.GetComponent<Canvas> ();
 		startButton = startButton.GetComponent<Button> ();
 		selectCarButton = selectCarButton.GetComponent<Button> ();
 		exitButton = exitButton.GetComponent<Button> ();
 
 		quitMenu.enabled = false;
+		creditsMenu.enabled = false;
+		returnMenu.enabled = false;
+		selectModeMenu.enabled = false;
 
 		cameraMenu.enabled = true;
 		cameraSelection.enabled = false;
@@ -37,8 +45,14 @@ public class MenuScript : MonoBehaviour {
 		startMenu.enabled = false;
 	}
 
+	public void CreditsPress() {
+		creditsMenu.enabled = true;
+		startMenu.enabled = false;
+	}
+
 	public void NoPress() {
 		quitMenu.enabled = false;
+		creditsMenu.enabled = false;
 		startMenu.enabled = true;
 	}
 
@@ -46,10 +60,22 @@ public class MenuScript : MonoBehaviour {
 		Application.Quit ();
 	}
 
+	public void PlayButtonPressed() {
+		selectModeMenu.enabled = true;
+	}
+
 	public void SelectionButtonPressed() {
 		cameraMenu.enabled = false;
 		cameraSelection.enabled = true;
 		startMenu.enabled = false;
+		returnMenu.enabled = true;
+	}
+
+	public void ReturnButtonPressed() {
+		cameraMenu.enabled = true;
+		cameraSelection.enabled = false;
+		startMenu.enabled = true;
+		returnMenu.enabled = false;
 	}
 
 	// Update is called once per frame
@@ -59,11 +85,22 @@ public class MenuScript : MonoBehaviour {
 				cameraMenu.enabled = true;
 				cameraSelection.enabled = false;
 				startMenu.enabled = true;
+				returnMenu.enabled = false;
 			}
-			player.transform.Rotate (Vector3.up, 0.5f, Space.Self);
-			player1.transform.Rotate (Vector3.up, 0.5f, Space.Self);
-			player2.transform.Rotate (Vector3.up, 0.5f, Space.Self);
-
+			int car = PlayerPrefs.GetInt ("Car");
+			if (car == 0) {
+				player.transform.Rotate (Vector3.up, 0.5f, Space.Self);
+				player1.transform.localEulerAngles = new Vector3 (0, 180, 0);
+				player2.transform.localEulerAngles = new Vector3 (0, 180, 0);
+			} else if (car == 1) {
+				player1.transform.Rotate (Vector3.up, 0.5f, Space.Self);
+				player.transform.localEulerAngles = new Vector3 (0, 180, 0);
+				player2.transform.localEulerAngles = new Vector3 (0, 180, 0);
+		 	} else if (car == 2) {
+				player2.transform.Rotate (Vector3.up, 0.5f, Space.Self);
+				player.transform.localEulerAngles = new Vector3 (0, 180, 0);
+				player1.transform.localEulerAngles = new Vector3 (0, 180, 0);
+			}
 		} else {
 			player.transform.localEulerAngles = new Vector3 (0, 180, 0);
 			player1.transform.localEulerAngles = new Vector3 (0, 180, 0);

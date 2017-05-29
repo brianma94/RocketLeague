@@ -8,8 +8,8 @@ public class LoadOnClick : MonoBehaviour {
 		
 	}
 
-	public void LoadScene(int level) {
-		Application.LoadLevel(level);
+	public void LoadScene(int mode) {
+		Application.LoadLevel(1);
 
 	}
 }
