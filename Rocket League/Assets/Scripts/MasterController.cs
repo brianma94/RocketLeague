@@ -34,8 +34,47 @@ public class MasterController : MonoBehaviour {
 		car0 = GameObject.Find ("Player");
 		car1 = GameObject.Find ("Player1");
 		car2 = GameObject.Find ("Player2");
+		int mode = PlayerPrefs.GetInt ("Mode");
 		int car = PlayerPrefs.GetInt ("Car");
-		if (car == 0) {
+		if (mode == 1) {
+			if (car == 0) {
+				cam0.enabled = true;
+				cam2.enabled = false;
+				cam1.enabled = false;
+
+				car0.GetComponent<MasterController> ().enabled = true;
+				car0.GetComponent<EnemyController> ().enabled = false;
+				car1.GetComponent<MasterController> ().enabled = false;
+				car1.GetComponent<EnemyController> ().enabled = true;
+				//car2.GetComponent<Renderer> ().enabled = false;
+				car2.SetActive(false);
+				car2.GetComponent<MasterController> ().enabled = false;
+				car2.GetComponent<EnemyController> ().enabled = false;
+			} else if (car == 1) {
+				cam0.enabled = false;
+				cam1.enabled = true;
+				cam2.enabled = false;
+				car1.GetComponent<MasterController> ().enabled = true;
+				car1.GetComponent<EnemyController> ().enabled = false;
+				car0.GetComponent<MasterController> ().enabled = false;
+				car0.GetComponent<EnemyController> ().enabled = true;
+				car2.GetComponent<MasterController> ().enabled = false;
+				car2.GetComponent<EnemyController> ().enabled = true;
+			} else if (car == 2) {
+				cam0.enabled = false;
+				cam1.enabled = false;
+				cam2.enabled = true;
+				car2.GetComponent<MasterController> ().enabled = true;
+				car2.GetComponent<EnemyController> ().enabled = false;
+				car0.GetComponent<MasterController> ().enabled = false;
+				car0.GetComponent<EnemyController> ().enabled = true;
+				car1.GetComponent<MasterController> ().enabled = false;
+				car1.GetComponent<EnemyController> ().enabled = true;
+			}
+		} else if (mode == 2) {
+		} else if (mode == 3) {
+		}
+		/*if (car == 0) {
 			cam0.enabled = true;
 			cam2.enabled = false;
 			cam1.enabled = false;
@@ -66,7 +105,7 @@ public class MasterController : MonoBehaviour {
 			car0.GetComponent<EnemyController> ().enabled = true;
 			car1.GetComponent<MasterController> ().enabled = false;
 			car1.GetComponent<EnemyController> ().enabled = true;
-		}
+		}*/
 	}
 	
 	// Update is called once per frame
@@ -79,23 +118,6 @@ public class MasterController : MonoBehaviour {
 	}
 
 	public void ApplyLocalPositionToVisuals(AxleLoadmasterCarInfo wheelPair) {
-		/*wheelPair.leftWeelMesh.transform.Rotate (Vector3.right, Time.deltaTime * wheelPair.leftWheel.rpm * 10, Space.Self);
-		wheelPair.rightWeelMesh.transform.Rotate (Vector3.right, Time.deltaTime * wheelPair.rightWheel.rpm * 10, Space.Self);
-
-		Debug.Log(wheelPair.leftWeelMesh.transform.localRotation.eulerAngles.y); 
-		if (Input.GetKey (KeyCode.LeftArrow) && wheelPair.steering && (wheelPair.leftWeelMesh.transform.localRotation.eulerAngles.y > 330.0f || wheelPair.leftWeelMesh.transform.localRotation.eulerAngles.y <= 30.1f)) {
-			wheelPair.leftWeelMesh.transform.Rotate (Vector3.up, -30.0f, Space.Self);
-			wheelPair.rightWeelMesh.transform.Rotate (Vector3.up, -30.0f, Space.Self);
-		} else if (Input.GetKey (KeyCode.RightArrow) && wheelPair.steering && (wheelPair.rightWeelMesh.transform.localRotation.eulerAngles.y >= 330.0f || wheelPair.leftWeelMesh.transform.localRotation.eulerAngles.y < 30.0f)) {
-			wheelPair.leftWeelMesh.transform.Rotate (Vector3.up, 30.0f, Space.Self);
-			wheelPair.rightWeelMesh.transform.Rotate (Vector3.up, 30.0f, Space.Self);
-			//Debug.Log("SUPUTAMADRE"); 
-		} else if (!Input.GetKey (KeyCode.RightArrow) && !Input.GetKey (KeyCode.LeftArrow)) {
-			if (wheelPair.steering) {
-				wheelPair.leftWeelMesh.transform.localEulerAngles = Vector3.zero;
-				wheelPair.rightWeelMesh.transform.localEulerAngles = Vector3.zero;
-			}
-		}*/
 
 		Transform visualWheelLeft = wheelPair.leftWheelMesh.transform;
 		Transform visualWheelRight = wheelPair.rightWheelMesh.transform;

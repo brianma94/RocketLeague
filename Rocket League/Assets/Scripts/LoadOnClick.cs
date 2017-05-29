@@ -9,7 +9,7 @@ public class LoadOnClick : MonoBehaviour {
 	}
 
 	public void LoadScene(int mode) {
+		PlayerPrefs.SetInt ("Mode", mode);
 		Application.LoadLevel(1);
-
 	}
 }
