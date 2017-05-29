@@ -38,37 +38,37 @@ public class GlobalScript : MonoBehaviour {
 		if (mode == 1) {
 			if (car == 0) {
 				cam0.enabled = true;
-				cam1.enabled = false;
+				cam3.enabled = false;
 				car0.GetComponent<MasterController> ().enabled = true;
 				car0.GetComponent<EnemyController> ().enabled = false;
-				car1.GetComponent<MasterController> ().enabled = false;
-				car1.GetComponent<EnemyController> ().enabled = true;
+				car3.GetComponent<MasterController> ().enabled = false;
+				car3.GetComponent<EnemyController> ().enabled = true;
 				car2.SetActive(false);
-				car3.SetActive(false);
+				car1.SetActive(false);
 				car4.SetActive(false);
 				car5.SetActive(false);
 			} else if (car == 1) {
 				cam1.enabled = true;
-				cam2.enabled = false;
+				cam4.enabled = false;
 				car1.GetComponent<MasterController> ().enabled = true;
 				car1.GetComponent<EnemyController> ().enabled = false;
 				car0.SetActive (false);
-				car2.GetComponent<MasterController> ().enabled = false;
-				car2.GetComponent<EnemyController> ().enabled = true;
+				car4.GetComponent<MasterController> ().enabled = false;
+				car4.GetComponent<EnemyController> ().enabled = true;
 				car3.SetActive(false);
-				car4.SetActive(false);
+				car2.SetActive(false);
 				car5.SetActive(false);
 			} else if (car == 2) {
-				cam0.enabled = false;
+				cam5.enabled = false;
 				cam2.enabled = true;
 				car2.GetComponent<MasterController> ().enabled = true;
 				car2.GetComponent<EnemyController> ().enabled = false;
-				car0.GetComponent<MasterController> ().enabled = false;
-				car0.GetComponent<EnemyController> ().enabled = true;
+				car5.GetComponent<MasterController> ().enabled = false;
+				car5.GetComponent<EnemyController> ().enabled = true;
 				car1.SetActive (false);
 				car3.SetActive(false);
 				car4.SetActive(false);
-				car5.SetActive(false);
+				car0.SetActive(false);
 			}
 		} else if (mode == 2) {
 			if (car == 0) {

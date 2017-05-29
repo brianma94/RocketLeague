@@ -195,7 +195,23 @@ public class MasterController : MonoBehaviour {
 	}
 
 	public void FixedUpdate() {
-		float motor = maxMotorTorque * Input.GetAxis ("Vertical");
+        if (Input.GetKey(KeyCode.Space) && Physics.Raycast(transform.position, -transform.up, 2)) {
+            GetComponent<Rigidbody>().AddForce(0, 50,0, ForceMode.Impulse);
+        }
+        GameObject p = GameObject.Find("Particle");
+        GameObject p1 = GameObject.Find("Particle1");
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            p.GetComponent<ParticleSystem>().enableEmission = true;
+            p1.GetComponent<ParticleSystem>().enableEmission = true;
+
+        }
+        else
+        {
+            p.GetComponent<ParticleSystem>().enableEmission = false;
+            p1.GetComponent<ParticleSystem>().enableEmission = false;
+        }
+        float motor = maxMotorTorque * Input.GetAxis ("Vertical");
 		float steering = maxSteeringAngle * Input.GetAxis ("Horizontal");
 
 

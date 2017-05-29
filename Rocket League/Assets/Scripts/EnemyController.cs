@@ -41,13 +41,13 @@ public class EnemyController : MonoBehaviour {
 		Transform target = ball.transform;
 		System.Random rnd = new System.Random();
 
-		int number = rnd.Next(1, 100);
+		/*int number = rnd.Next(1, 1);
 		if (number == 1)
-		{
+		{*/
 
 			this.transform.LookAt(target);
 			this.transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
-		}
+		//}
 		//this.transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.position.x + 1, 0, target.position.z + 1), Time.deltaTime * speed);
 		//GetComponent<Rigidbody>().AddForceAtPosition(30 * transform.forward, 
 			//transform.position);
@@ -73,11 +73,11 @@ public class EnemyController : MonoBehaviour {
 				//axleInfo.rightWheel.steerAngle = steering;
 			}
 
-			// Check the motor
-			if (axleInfo.motor == true) {
+            // Check the motor
+            if (axleInfo.motor == true) {
 				axleInfo.leftWheel.motorTorque = motor;
 				axleInfo.rightWheel.motorTorque = motor;
-			}
+            }
 
 			ApplyLocalPositionToVisuals (axleInfo);
 		}

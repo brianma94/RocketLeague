@@ -22,16 +22,16 @@ public class GoalBallManager : MonoBehaviour
     public void OnTriggerEnter(Collider other)
     {
 		GameObject ball = GameObject.Find ("Ball");
-		if (other.gameObject.tag == "Goal_R") {
+		if (other.gameObject.tag == "Goal_R") { //azul
 			ball.transform.position = GameObject.Find ("BallPosition").transform.position;
 			ball.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 			++scoreTeam2;
-			textTeam1.text = scoreTeam1.ToString();
-		} else if (other.gameObject.tag == "Goal_L") {
+			textTeam2.text = scoreTeam2.ToString();
+		} else if (other.gameObject.tag == "Goal_L") { //roja
 			ball.transform.position = GameObject.Find ("BallPosition").transform.position;
 			ball.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 			++scoreTeam1;
-			textTeam2.text = scoreTeam2.ToString();
+			textTeam1.text = scoreTeam1.ToString();
 		}
     }
 
