@@ -17,6 +17,5 @@ public class Player2Selection : MonoBehaviour {
 
 	void OnMouseDown() {
 		PlayerPrefs.SetInt ("Car", 2);
-		//Application.LoadLevel(1);
 	}
 }

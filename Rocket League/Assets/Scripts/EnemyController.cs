@@ -39,38 +39,16 @@ public class EnemyController : MonoBehaviour {
 	public void FixedUpdate() {
 
 		Transform target = ball.transform;
-		System.Random rnd = new System.Random();
-
-		/*int number = rnd.Next(1, 1);
-		if (number == 1)
-		{*/
-
 			this.transform.LookAt(target);
 			this.transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, 0);
-		//}
-		//this.transform.position = Vector3.MoveTowards(transform.position, new Vector3(target.position.x + 1, 0, target.position.z + 1), Time.deltaTime * speed);
-		//GetComponent<Rigidbody>().AddForceAtPosition(30 * transform.forward, 
-			//transform.position);
-		// }
+
 
 		float motor = maxMotorTorque;
 		float steering;
-		/*int number1 = rnd.Next(1, 2);
-		if (number1 == 1) {
-			if (target.transform.localPosition.z > this.transform.localPosition.z) {
-				steering = maxSteeringAngle * 1.0f;
-			} else if (target.transform.localPosition.z < this.transform.localPosition.z) {
-				steering = maxSteeringAngle * -1.0f;
-			} else {
-				steering = 0.0f;
-			}
-		}*/
 
 		foreach (AxleLoadmasterCarInfo1 axleInfo in axleInfos1) {
 			// Check the steering
 			if (axleInfo.steering == true) {
-				//axleInfo.leftWheel.steerAngle = steering;
-				//axleInfo.rightWheel.steerAngle = steering;
 			}
 
             // Check the motor

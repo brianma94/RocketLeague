@@ -17,12 +17,4 @@ public class camera : MonoBehaviour {
         transform.LookAt(target2);
         //transform.position += offset;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-       // transform.LookAt(target1);
-        //transform.LookAt(target2);
-       // transform.position += offset;
-    }
 }

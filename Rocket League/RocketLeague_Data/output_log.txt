@@ -15,7 +15,7 @@ Platform assembly: C:\Users\Brian\Documents\FIB\VJ\RocketLeague\Rocket League\Ro
 Loading C:\Users\Brian\Documents\FIB\VJ\RocketLeague\Rocket League\RocketLeague_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\Brian\Documents\FIB\VJ\RocketLeague\Rocket League\RocketLeague_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\Brian\Documents\FIB\VJ\RocketLeague\Rocket League\RocketLeague_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.016 seconds
+- Completed reload, in  0.021 seconds
 Platform assembly: C:\Users\Brian\Documents\FIB\VJ\RocketLeague\Rocket League\RocketLeague_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Brian\Documents\FIB\VJ\RocketLeague\Rocket League\RocketLeague_Data\Managed\System.dll (this message is harmless)
 desktop: 1440x900 60Hz; virtual: 2720x1024 at 0,0
@@ -29,27 +29,7 @@ The referenced script on this Behaviour (Game Object 'Environment') is missing!
  
 (Filename:  Line: 1743)
 
-UnloadTime: 1.511744 ms
+UnloadTime: 0.968182 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 2b70 -> priority: 1 
-  Thread -> id: 187c -> priority: 1 
-The referenced script on this Behaviour (Game Object 'Environment') is missing!
- 
-(Filename:  Line: 1743)
-
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 3.435251 ms
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1296.
-Total: 2.043324 ms (FindLiveObjects: 0.041789 ms CreateObjectMapping: 0.017826 ms MarkObjects: 0.247817 ms  DeleteObjects: 1.735305 ms)
-
-The referenced script on this Behaviour (Game Object 'Environment') is missing!
- 
-(Filename:  Line: 1743)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.850995 ms
-
-Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 553.
-Total: 2.771287 ms (FindLiveObjects: 0.020164 ms CreateObjectMapping: 0.013150 ms MarkObjects: 0.197552 ms  DeleteObjects: 2.540420 ms)
-
+  Thread -> id: 55c -> priority: 1 
+  Thread -> id: 3528 -> priority: 1 
