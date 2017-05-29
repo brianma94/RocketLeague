@@ -41,7 +41,7 @@ public class EnemyController : MonoBehaviour {
 		Transform target = ball.transform;
 		System.Random rnd = new System.Random();
 
-		int number = rnd.Next(1, 10);
+		int number = rnd.Next(1, 100);
 		if (number == 1)
 		{
 

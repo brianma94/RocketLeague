@@ -15,7 +15,7 @@ Platform assembly: C:\Users\eric\Desktop\VJ\RocketLeague\Rocket League\RocketLea
 Loading C:\Users\eric\Desktop\VJ\RocketLeague\Rocket League\RocketLeague_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
 Platform assembly: C:\Users\eric\Desktop\VJ\RocketLeague\Rocket League\RocketLeague_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
 Loading C:\Users\eric\Desktop\VJ\RocketLeague\Rocket League\RocketLeague_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-- Completed reload, in  0.112 seconds
+- Completed reload, in  0.097 seconds
 Platform assembly: C:\Users\eric\Desktop\VJ\RocketLeague\Rocket League\RocketLeague_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\eric\Desktop\VJ\RocketLeague\Rocket League\RocketLeague_Data\Managed\System.dll (this message is harmless)
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
@@ -29,47 +29,67 @@ The referenced script on this Behaviour (Game Object 'Environment') is missing!
  
 (Filename:  Line: 1743)
 
-UnloadTime: 3.601999 ms
+UnloadTime: 2.972006 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 1e50 -> priority: 1 
-  Thread -> id: 4f0 -> priority: 1 
+  Thread -> id: d58 -> priority: 1 
+  Thread -> id: 136c -> priority: 1 
 The referenced script on this Behaviour (Game Object 'Environment') is missing!
  
 (Filename:  Line: 1743)
 
 Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.988530 ms
+UnloadTime: 3.828930 ms
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1122.
-Total: 1.792025 ms (FindLiveObjects: 0.038937 ms CreateObjectMapping: 0.027681 ms MarkObjects: 0.227235 ms  DeleteObjects: 1.497258 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 1243.
+Total: 2.195391 ms (FindLiveObjects: 0.066314 ms CreateObjectMapping: 0.027681 ms MarkObjects: 0.272560 ms  DeleteObjects: 1.828225 ms)
 
 The referenced script on this Behaviour (Game Object 'Environment') is missing!
  
 (Filename:  Line: 1743)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.903161 ms
+UnloadTime: 0.989857 ms
 
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 552.
-Total: 2.134856 ms (FindLiveObjects: 0.023423 ms CreateObjectMapping: 0.016426 ms MarkObjects: 0.260697 ms  DeleteObjects: 1.834005 ms)
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 553.
+Total: 3.033454 ms (FindLiveObjects: 0.021293 ms CreateObjectMapping: 0.018556 ms MarkObjects: 0.259176 ms  DeleteObjects: 2.734124 ms)
 
 The referenced script on this Behaviour (Game Object 'Environment') is missing!
  
 (Filename:  Line: 1743)
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.739199 ms
+UnloadTime: 0.845668 ms
 
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1122.
-Total: 1.879634 ms (FindLiveObjects: 0.053538 ms CreateObjectMapping: 0.026769 ms MarkObjects: 0.206549 ms  DeleteObjects: 1.592168 ms)
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1243.
+Total: 2.189915 ms (FindLiveObjects: 0.067531 ms CreateObjectMapping: 0.025856 ms MarkObjects: 0.234231 ms  DeleteObjects: 1.861382 ms)
 
 The referenced script on this Behaviour (Game Object 'Environment') is missing!
  
 (Filename:  Line: 1743)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 1.856211 ms
+UnloadTime: 0.985598 ms
 
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 552.
-Total: 2.319808 ms (FindLiveObjects: 0.020077 ms CreateObjectMapping: 0.016730 ms MarkObjects: 0.232710 ms  DeleteObjects: 2.049985 ms)
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 553.
+Total: 2.976874 ms (FindLiveObjects: 0.031940 ms CreateObjectMapping: 0.019468 ms MarkObjects: 0.281686 ms  DeleteObjects: 2.642865 ms)
+
+The referenced script on this Behaviour (Game Object 'Environment') is missing!
+ 
+(Filename:  Line: 1743)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.857836 ms
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 1243.
+Total: 2.150370 ms (FindLiveObjects: 0.060231 ms CreateObjectMapping: 0.029507 ms MarkObjects: 0.244574 ms  DeleteObjects: 1.815449 ms)
+
+The referenced script on this Behaviour (Game Object 'Environment') is missing!
+ 
+(Filename:  Line: 1743)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.020581 ms
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 553.
+Total: 3.118325 ms (FindLiveObjects: 0.029202 ms CreateObjectMapping: 0.017947 ms MarkObjects: 0.281990 ms  DeleteObjects: 2.788880 ms)
 

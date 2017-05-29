@@ -21,9 +21,6 @@ public class GoalBallManager : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-		GameObject car = GameObject.Find ("Player");
-		GameObject enemy = GameObject.Find ("Player1");
-		GameObject enemy2 = GameObject.Find ("Player2");
 		GameObject ball = GameObject.Find ("Ball");
 		if (other.gameObject.tag == "Goal_R") {
 			ball.transform.position = GameObject.Find ("BallPosition").transform.position;

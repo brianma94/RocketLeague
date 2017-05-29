@@ -92,11 +92,11 @@ public class MenuScript : MonoBehaviour {
 				player.transform.Rotate (Vector3.up, 0.5f, Space.Self);
 				player1.transform.localEulerAngles = new Vector3 (0, 180, 0);
 				player2.transform.localEulerAngles = new Vector3 (0, 180, 0);
-			} else if (car == 1) {
+			} else if (car == 2) {
 				player1.transform.Rotate (Vector3.up, 0.5f, Space.Self);
 				player.transform.localEulerAngles = new Vector3 (0, 180, 0);
 				player2.transform.localEulerAngles = new Vector3 (0, 180, 0);
-		 	} else if (car == 2) {
+		 	} else if (car == 1) {
 				player2.transform.Rotate (Vector3.up, 0.5f, Space.Self);
 				player.transform.localEulerAngles = new Vector3 (0, 180, 0);
 				player1.transform.localEulerAngles = new Vector3 (0, 180, 0);
